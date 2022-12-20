@@ -43,6 +43,7 @@
                         </nav>
                     </div>
                 </header>
+                    <a id="pop"></a>
                     <img id="mainImg" src="Images/Pluckers.webp" alt="pluckers">
                     <main id="text">
                     <h1>Support the Ceylon Tea Industry</h1>
@@ -50,23 +51,93 @@
                         The tea industry also supports approximately 20 per cent of the country's population, through direct and indirect employment, outsourcing and dependent families, which extends to a number of ancillary industries, such as shipping, transportation, printing, packaging, etc. </p>
                     <div class="column">
                         <div class="button">
-                        <button>$1<br>Feed a tea plucker for a day</button>
+                        <a href="#pay"><button>$1<br></button></a>
                         </div>
                         <div class="button">
-                        <button>$5<br>Pay a week's salary</button>
+                        <a href="#pay"><button>$5<br></button></a>
                         </div>
                         <div class="button">
-                        <button>$10<br>Provide rations for a week</button>
+                        <a href="#pay"><button>$10<br></button></a>
                         </div>
                         <div class="button">
-                        <button>$50<br>Sponsor a child's education</button>
+                        <a href="#pay"><button>$50<br></button></a>
                         </div>
                         <div class="button">
-                        <button>$100<br>Build a single waterwell</button>
+                        <a href="#pay"><button>$100<br></button></a>
                         </div>
                         <div class="button">
-                        <button><br>Other<br><br></button>
+                        <a href="#pay"><button>$250<br></button></a>
                         </div>
+                    </div>
+                    <div class="payment">
+                        
+                        <a id="pay"></a><form action="" id="form"></a>
+                            <div class="inputBox">
+                                <span>Name</span>
+                                <input type="text" class="input" id="name" required="required">
+                                
+                            </div>
+                            <div class="inputBox">
+                                <span>Address</span>
+                                <input type="text" class="input" id="address" required="required">
+                            </div>
+                            <div class="inputBox">
+                                <span>Card number</span>
+                                <input type="text" maxlength="16" class="input" required>
+                            </div>
+                            <div class="inputBox">
+                                <span>Card holder</span>
+                                <input type="text" class="input" required>
+                            </div>
+                            <div class="flexbox">
+                                <div class="inputBox">
+                                    <span>Expiration month</span>
+                                    <select name="" id="" class="months">
+                                        <option value="month" selected disabled>MM</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="inputBox">
+                                    <span>Expiration year</span>
+                                    <select name="" id="" class="years">
+                                        <option value="year" selected disabled>YYYY</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2031">2031</option>
+                                        <option value="2032">2032</option>
+                                    </select>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV</span>
+                                    <input type="text" maxlength="3" class="cvv" required>
+                                </div>
+                            </div>
+                            <a href="#pop"><input type="submit" value="Submit" class="submit-btn" onclick="openPopup()"></a>
+                            <div class="popup" id="popup">
+                                
+                                <h2>Thank You!</h2>
+                                <p>Your donation was successful.</p>
+                                <button type="button" onclick="closePopup()">OK</button>
+                                
+                            </div>
+                        </form>
                     </div>
                     <div class="product-container">
                         <h2>You can also support local businesses and purchase...</h2>
@@ -95,6 +166,7 @@
                       </ul>
                       <p>© 2022 Ceylon Tea</p>
                     </nav>
+                    <script src="scripts.js"></script>
                     <!--
                         Theculturetrip (2022)A Brief History of Ceylon Tea, from Lipton to Teaeli [Online] Available from:
                         https://theculturetrip.com/asia/sri-lanka/articles/a-brief-history-of-ceylon-tea-from-lipton-to-teaeli/
